@@ -10,6 +10,9 @@
 
 ### QNAP multimedia station and media console streaming addons
 
+In `http://<nas-ip>:8080/apps/upnp/extjs-3.3.3/myupnp/qdms.html`.
+
+We can configure Server and menu (in particular to show folders).
 
 ### Cohen3
 
@@ -51,6 +54,12 @@ kill -9 $(cat ~/tmp/save_cohen_pid.txt)
 rm ~/tmp/save_cohen_pid.txt
 ```
 
+<!--
+Doc:
+https://stackoverflow.com/questions/525247/how-do-i-daemonize-an-arbitrary-script-in-unix
+https://stackoverflow.com/questions/17385794/how-to-get-the-process-id-to-kill-a-nohup-process
+-->
+
 We can start media server at start-up via `crontab -e`, add following line
 
 ````shell
@@ -60,12 +69,8 @@ We can start media server at start-up via `crontab -e`, add following line
 Note the output directory help me to find cohen3 not found thus full path
 -->
 
-<!--
-Doc:
-https://stackoverflow.com/questions/525247/how-do-i-daemonize-an-arbitrary-script-in-unix
-https://stackoverflow.com/questions/17385794/how-to-get-the-process-id-to-kill-a-nohup-process
--->
-<!-- I use here path to pcloud which is sync (NAS -> Pcloud) -->
+
+<!-- I use here path to pcloud drive which is sync (NAS -> Pcloud) -->
 
 
 <!--
