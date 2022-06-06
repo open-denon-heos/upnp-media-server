@@ -8,7 +8,8 @@
 
 ## Server
 
-### QNAP multimedia sation 
+### QNAP multimedia station and media console streaming addons
+
 
 ### Cohen3
 
@@ -49,6 +50,15 @@ echo $! > ~/tmp/save_cohen_pid.txt
 kill -9 $(cat ~/tmp/save_cohen_pid.txt)
 rm ~/tmp/save_cohen_pid.txt
 ```
+
+We can start media server at start-up via `crontab -e`, add following line
+
+````shell
+@reboot /home/scoulomb/.local/bin/cohen3 -c ~/tmp/desktop_config.cohen3 > ~/cohen_out.xt  2>&1
+````
+<!--
+Note the output directory help me to find cohen3 not found thus full path
+-->
 
 <!--
 Doc:
